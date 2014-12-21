@@ -1,0 +1,63 @@
+\documentclass[pscyr,notitle]{hedwork}
+\usepackage[russian]{babel}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{listings}
+\graphicspath{{images/}}
+
+\lstset{
+    extendedchars=\true,
+    inputencoding=utf8
+}
+
+\lstdefinelanguage{js}{
+  keywords={break, case, catch, continue, debugger, default, delete, do, else, finally, for, function, if, in, instanceof, new, return, switch, this, throw, try, typeof, var, void, while, with},
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]',
+  morestring=[b]",
+  sensitive=true,
+  basicstyle=\small,
+}
+
+\renewcommand{\thesection}{\arabic{section}.}
+\renewcommand{\thesubsection}{\thesection\arabic{subsection}.}
+\renewcommand{\thesubsubsection}{\thesubsection\arabic{subsubsection}.}
+
+\newcommand{\maketitlepage}{
+    \begin{titlepage}
+        \singlespacing
+        \newpage
+        \begin{center}
+            Министерство образования и науки Российской Федерации \\
+            Федеральное государственное бюджетное образовательное \\
+            учреждение высшего профессионального образования \\
+            <<Волгоградский государственный технический университет>> \\
+            Факультет электроники и вычислительной техники\\
+            Кафедра физики
+        \end{center}
+        \vspace{9em}
+        \begin{center}
+            Лабораторная работа\\[.5em]
+            \Large\scshape <<>>
+        \end{center}
+        \vspace{1em}        
+        \begin{center}
+            Методические указания
+        \end{center}
+        \vspace{3em}
+        
+        \vspace{\fill}
+        \begin{center}
+            Волгоград, \the\year
+        \end{center}
+
+    \end{titlepage}
+    \setcounter{page}{2}
+}
+
+\begin{document}
+    \maketitlepage
+    \input{text}
+\end{document}
