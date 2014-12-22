@@ -661,7 +661,7 @@ OpenLayers\cite{openlayers} авторы не пытаемся впихнуть 
 начальные координаты и масштаб (метод 
 \code{setView([широта, долгота], масштаб))}:
 \begin{lstlisting}[language=js]
-    map.setView([48.7819, 44.7777], 13);
+    map.setView([48.7819, 44.7777], 14);
 \end{lstlisting}
 или
 \begin{lstlisting}[language=js]
@@ -703,13 +703,13 @@ OpenLayers\cite{openlayers} авторы не пытаемся впихнуть 
 \begin{lstlisting}[language=js]
     for (i in data) {
         marker = L.marker(data[i]).addTo(map);
-        marker.bindPopup(data[i][0] + ‘, ‘ + data[i][1]);
+        marker.bindPopup(data[i][0] + ', ' + data[i][1]);
     }
 \end{lstlisting}
 Или:
 \begin{lstlisting}[language=js]
     for (i in data) {
-        L.marker(data[i]).addTo(map).bindPopup(data[i][0] + ‘, ‘ + data[i][1]);
+        L.marker(data[i]).addTo(map).bindPopup(data[i][0] + ', ' + data[i][1]);
     }
 \end{lstlisting}
 
@@ -744,7 +744,7 @@ OpenLayers\cite{openlayers} авторы не пытаемся впихнуть 
 координатами на нажатие круга:
 \begin{lstlisting}[language=js]
     for (i in data) {
-        L.circle(data[i], 50).addTo(map).bindPopup(data[i][0] + ‘, ‘ + data[i][1]);
+        L.circle(data[i], 50).addTo(map).bindPopup(data[i][0] + ', ' + data[i][1]);
     }
 \end{lstlisting}
 
@@ -812,7 +812,7 @@ OpenLayers\cite{openlayers} авторы не пытаемся впихнуть 
 
 Таким же образом можно менять стиль кругов, изображающих наши точки:
 \begin{lstlisting}[language=js]
-    L.circle(data[i], 50, {color: ‘#f00’}).addTo(map);
+    L.circle(data[i], 50, {color: '#f00'}).addTo(map);
 \end{lstlisting}
 
 После этого круги у нас будут красного цвета, а линия -- черная и узкая
