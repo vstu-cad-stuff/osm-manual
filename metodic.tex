@@ -1,14 +1,16 @@
-\documentclass[pscyr,notitle]{hedwork}
+\documentclass[pscyr,notitlepage]{hedwork}
 \usepackage[russian]{babel}
 \usepackage{graphicx}
 \usepackage{setspace}
-\usepackage{hyperref}
+\usepackage[unicode=true]{hyperref}
 \usepackage{listings}
 \graphicspath{{images/}}
 
 \lstset{
     extendedchars=\true,
-    inputencoding=utf8
+    inputencoding=utf8,
+    breaklines=true,
+    basicstyle=\footnotesize
 }
 
 \lstdefinelanguage{js}{
@@ -17,13 +19,16 @@
   morecomment=[s]{/*}{*/},
   morestring=[b]',
   morestring=[b]",
-  sensitive=true,
-  basicstyle=\small,
+  sensitive=true
 }
 
 \renewcommand{\thesection}{\arabic{section}.}
 \renewcommand{\thesubsection}{\thesection\arabic{subsection}.}
 \renewcommand{\thesubsubsection}{\thesubsection\arabic{subsubsection}.}
+
+\newcommand{\code}[1]{{\small #1}}
+
+\renewcommand{\UrlFont}{\small\normalfont}
 
 \newcommand{\maketitlepage}{
     \begin{titlepage}
@@ -35,12 +40,12 @@
             учреждение высшего профессионального образования \\
             <<Волгоградский государственный технический университет>> \\
             Факультет электроники и вычислительной техники\\
-            Кафедра физики
+            Кафедра <<САПР и ПК>>
         \end{center}
         \vspace{9em}
         \begin{center}
             Лабораторная работа\\[.5em]
-            \Large\scshape <<>>
+            \Large\scshape <<Технология OpenStreetMap и\\библиотека Leaflet>>
         \end{center}
         \vspace{1em}        
         \begin{center}
