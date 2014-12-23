@@ -1,2 +1,3 @@
-Методическое пособие по OSM
+OSM Manual
 ==========
+Тема: Технология OpenStreetMap и библиотека Leaflet.
