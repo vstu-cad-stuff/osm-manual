@@ -1,4 +1,4 @@
-\documentclass[pscyr,notitlepage]{hedwork}
+\documentclass[pscyr,notitlepage,chapters]{hedwork}
 \usepackage[russian]{babel}
 \usepackage{graphicx}
 \usepackage{setspace}
@@ -22,7 +22,10 @@
   sensitive=true
 }
 
-\renewcommand{\thesection}{\arabic{section}.}
+\makeatletter
+  \renewcommand{\@chapapp}{}
+\makeatother
+\renewcommand{\thesection}{\thechapter.\arabic{section}.}
 \renewcommand{\thesubsection}{\thesection\arabic{subsection}.}
 \renewcommand{\thesubsubsection}{\thesubsection\arabic{subsubsection}.}
 
