@@ -255,10 +255,10 @@
 \begin{frame}
     \frametitle{Сторонние инструменты}
     \begin{itemize}
-        \item Leaflet \url{http://leafletjs.com/}
-        \item Mapnik \url{http://mapnik.org/}
-        \item Merkaartor \url{http://merkaartor.be/}
-        \item OSRM \url{http://project-osrm.org/}
+        \item Leaflet (\url{http://leafletjs.com/})
+        \item Mapnik (\url{http://mapnik.org/})
+        \item Merkaartor (\url{http://merkaartor.be/})
+        \item OSRM (\url{http://project-osrm.org/})
         \item ...\footnotemark
     \end{itemize}
     \begin{figure}[ht!]
@@ -290,7 +290,7 @@
 
 \subsection{Примеры}
 \begin{frame}[fragile]
-    \frametitle{JS}
+    \frametitle{Leaflet}
     \begin{figure}[ht!]
         \includegraphics[width=\textwidth]{leaflet-map-02}
     \end{figure}
@@ -306,6 +306,27 @@ L.marker([51.5, -0.09]).addTo(map)
     .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
     .openPopup();
     \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Leaflet}
+    \begin{figure}[ht!]
+        \includegraphics[width=\textwidth]{leaflet-map-03}
+    \end{figure}
+    \begin{lstlisting}[language=JavaScript]
+var marker = L.marker([51.5, -0.09]).addTo(map);
+var circle = L.circle([51.508, -0.11], 500, {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5
+}).addTo(map);
+var polygon = L.polygon([
+    [51.509, -0.08],
+    [51.503, -0.06],
+    [51.51, -0.047]
+]).addTo(map);
+    \end{lstlisting}
+    \footnotemark{\scriptsize\url{http://leafletjs.com/examples/quick-start.html}}
 \end{frame}
 
 \begin{frame}
